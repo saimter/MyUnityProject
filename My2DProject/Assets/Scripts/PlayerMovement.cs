@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 // 이 코드는 무조건 Rigidbody2d를 필요로 하고 없을시 에러 메시지 방출
 //  에디터에서 등록하지 않으면 강제로 등록 시킴
@@ -26,8 +27,8 @@ public class PlayerMovement : MonoBehaviour
     public bool is_jump = false;
 
     private Rigidbody2D rigid;
-         
 
+    public Text txtOutput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         //  컴포넌트의 형태가 다르다면 오류 발생
         //  해당 데이터가 존재하지 않을 경우라면 null을 반환하게 된다.
         rigid = GetComponent<Rigidbody2D>();
-
+        txtOutput.text = "COINS : 100";
 
     }
 
